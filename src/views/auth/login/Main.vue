@@ -1,7 +1,7 @@
 <template>
   <div :key="renderKey" v-if="renderKey">
     <h2 class="intro-x text-center text-xl font-bold uppercase text-slate-500">
-      Hesabınıza Giriş Yapınız
+      Hesabınıza Giriş Yapınız Ve Devam Edin
     </h2>
     <div class="intro-x mt-8 grid gap-4">
       <FormInputContainer :errors="validationErrors.get('subdomain')">
