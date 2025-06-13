@@ -1,0 +1,35 @@
+::-webkit-scrollbar {
+  @apply bg-black/5 rounded-full;
+
+  &:vertical {
+    @apply w-1.5;
+  }
+
+  &:horizontal {
+    @apply h-1.5;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  transition: background-color ease-in-out 1s;
+  @apply bg-primary/10 rounded-full;
+
+  &:hover {
+    @apply bg-primary/50 cursor-pointer;
+  }
+}
+
+
+.scrollbar--minimize {
+  &::-webkit-scrollbar {
+    @apply bg-black/5;
+
+    &:vertical {
+      @apply w-1.5;
+    }
+
+    &:horizontal {
+      @apply h-1.5;
+    }
+  }
+}

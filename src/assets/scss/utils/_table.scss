@@ -1,0 +1,188 @@
+@layer components {
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+    @apply w-full text-left;
+
+    > thead {
+      th {
+        @apply px-3 py-2 font-bold text-sm border-none text-slate-500 dark:border-darkmode-300;
+      }
+    }
+    > tbody {
+      > tr {
+        > td {
+          @apply px-3 py-3 border-t border-l border-slate-200/40 bg-white leading-snug;
+          @apply dark:bg-darkmode-500 dark:border-darkmode-400;
+          &:last-child {
+            @apply border-r;
+          }
+
+          &.table-color-line {
+            @apply relative pl-11 pr-1;
+            .table-color-line {
+              @apply absolute left-0 top-0 h-full w-8 inline-flex items-center justify-center text-center font-bold;
+            }
+          }
+        }
+        &:first-child {
+          > td:first-child {
+            @apply rounded-tl-lg;
+            &.table-color-line {
+              .table-color-line {
+                @apply rounded-tl-lg;
+              }
+            }
+          }
+          > td:last-child {
+            @apply rounded-tr-lg;
+          }
+        }
+        &:last-child {
+          > td {
+            @apply border-b;
+          }
+          > td:first-child {
+            @apply rounded-bl-lg;
+            &.table-color-line {
+              .table-color-line {
+                @apply rounded-bl-lg;
+              }
+            }
+          }
+          > td:last-child {
+            @apply rounded-br-lg;
+          }
+        }
+        &:nth-child(2n) > td {
+          @apply bg-slate-50 dark:bg-darkmode-400/60;
+        }
+      }
+    }
+
+    &.table-no-fill {
+      > tbody {
+        > tr {
+          > td {
+            @apply bg-transparent;
+          }
+          &:nth-child(2n) > td {
+            @apply bg-transparent;
+          }
+        }
+      }
+    }
+
+    &.table-secondary-fixed {
+      > tbody {
+        > tr {
+          > td {
+            @apply bg-slate-100/70;
+          }
+          &:nth-child(2n) > td {
+            @apply bg-slate-100/70;
+          }
+        }
+      }
+    }
+
+    &.table-secondary {
+      > tbody {
+        > tr {
+          > td {
+            @apply bg-slate-100/70 border-slate-200/60 dark:bg-darkmode-700 dark:border-darkmode-500;
+          }
+          &:nth-child(2n) > td {
+            @apply bg-transparent dark:bg-darkmode-800/70;
+          }
+        }
+      }
+    }
+
+    &.filled-thead {
+      > thead {
+        th {
+          @apply bg-slate-50 border-b border-r border-slate-200/40 border-solid;
+          @apply dark:bg-darkmode-500 dark:border-darkmode-400;
+
+          &:first-child {
+            @apply rounded-tl-lg;
+          }
+          &:last-child {
+            @apply rounded-tr-lg border-r-0;
+          }
+        }
+
+        > tr:not(:first-child) > th {
+          @apply rounded-none;
+        }
+      }
+
+      > tbody > tr:first-child > td {
+        @apply rounded-none;
+      }
+    }
+
+    &.table-sm {
+      > tbody > tr > td,
+      > thead > td {
+        @apply px-2.5 py-2;
+      }
+    }
+
+    &.table-xs {
+      > tbody > tr > td,
+      > thead > td {
+        @apply px-1;
+      }
+    }
+
+    &.table-no-bordered {
+      > tbody {
+        > tr {
+          > td {
+            @apply border-0;
+          }
+          &:first-child,
+          &:last-child {
+            > td {
+              @apply rounded-none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table-container {
+    @apply relative;
+  }
+
+  .virtual--table-wrapper {
+    @apply relative;
+
+    .table-pagination {
+      @apply flex justify-center mt-7;
+
+      .simple-pagination {
+        box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+        @apply bg-white px-8 py-3 rounded-full;
+
+        .btn-icon {
+          @apply bg-slate-50 border-secondary;
+        }
+
+        .form-control,
+        .form-select {
+          @apply bg-slate-50 border-secondary;
+        }
+      }
+    }
+  }
+}
+
+.container-no-padding > .page-section-container {
+  & > .virtual--table-wrapper > .table-container {
+    @apply p-4 pt-2 md:p-6 md:pt-2;
+  }
+}

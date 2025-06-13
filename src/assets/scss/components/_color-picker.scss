@@ -1,0 +1,12 @@
+@import "vue-color-kit/dist/vue-color-kit.css";
+
+.hu-color-picker-container {
+  z-index: 1030;
+  @apply absolute left-0 top-0 w-full h-full;
+  .hu-color-picker {
+    width: min-content !important;
+  }
+}
+.colors .item:nth-child(8n + 1) {
+  margin-left: 10px;
+}

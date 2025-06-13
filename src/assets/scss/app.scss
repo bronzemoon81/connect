@@ -1,0 +1,23 @@
+@import "./utils/starter";
+
+@import "fonts/montserrat";
+@import "fonts/nunito";
+@import "fonts/inter";
+@import "fonts/icon-outline";
+@import "fonts/icon-duotone";
+
+@import "themes/default/app";
+
+@import "components/global";
+@import "components/login";
+@import "components/tippy";
+@import "components/lucide-icon";
+@import "components/datetime-picker";
+@import "components/pagination";
+@import "components/color-picker";
+@import "components/top-navigation";
+@import "components/page-header";
+@import "components/page-section";
+@import "components/content";
+@import "components/ace-editor";
+@import "components/handsontable";

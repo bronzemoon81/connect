@@ -1,0 +1,70 @@
+@import "@vuepic/vue-datepicker/dist/main.css";
+
+.dp__theme_light {
+  --dp-background-color: #fff;
+  --dp-text-color: #212121;
+  --dp-hover-color: #f3f3f3;
+  --dp-hover-text-color: #212121;
+  --dp-hover-icon-color: #959595;
+  --dp-secondary-color: #c0c4cc;
+  --dp-border-color: rgba(226, 232, 240);
+  --dp-menu-border-color: rgba(226, 232, 240);
+  --dp-border-color-hover: #e2e8f0;
+  --dp-disabled-color: #f6f6f6;
+  --dp-scroll-bar-background: #f3f3f3;
+  --dp-scroll-bar-color: #959595;
+  --dp-success-color: #76d275;
+  --dp-success-color-disabled: #a3d9b1;
+  --dp-icon-color: #959595;
+  --dp-danger-color: #ff6f60;
+  --dp-marker-color: #ff6f60;
+  --dp-tooltip-color: #fafafa;
+  --dp-disabled-color-text: #8e8e8e;
+}
+
+.dp-custom-calendar {
+  .dp__calendar_header_item {
+    @apply text-base;
+  }
+}
+
+.dp-custom-menu {
+  @apply rounded-xl shadow-xl border border-gray-200;
+  .dp__month_year_row {
+    @apply p-2.5 h-auto;
+  }
+  .dp__button_bottom {
+    @apply rounded-b-xl;
+  }
+}
+
+.dp-custom-cell {
+  @apply rounded-full text-base;
+  &.dp__range_start {
+    @apply rounded-r-none;
+  }
+  &.dp__range_between {
+    @apply rounded-none;
+  }
+  &.dp__range_end {
+    @apply rounded-l-none;
+  }
+}
+
+.dp-custom-input {
+  height: 38px;
+  @apply shadow-none bg-slate-50 w-full text-sm border-slate-200 rounded text-slate-600 placeholder:text-slate-400/90 focus:ring-4 focus:ring-primary focus:ring-opacity-20 focus:border-primary focus:border-opacity-40 dark:bg-darkmode-800 dark:border-transparent dark:focus:ring-slate-700 dark:focus:ring-opacity-50 dark:transition-none dark:placeholder:text-slate-500/80;
+  &:disabled,
+  &[readonly] {
+    @apply bg-slate-300/40 cursor-not-allowed dark:bg-darkmode-800/50 dark:border-transparent;
+  }
+}
+
+.picker-transparent {
+  .dp-custom-input {
+    @apply bg-transparent text-white border-white/25;
+  }
+  .dp__input_icon {
+    @apply text-white/75;
+  }
+}

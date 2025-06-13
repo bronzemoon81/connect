@@ -1,0 +1,107 @@
+@layer components {
+  .nav {
+    @apply w-full flex overflow-x-auto relative;
+    &.nav-link-tabs {
+      @apply overflow-x-auto gap-x-8;
+      .nav-item {
+        .nav-link {
+          z-index: 1;
+          @apply whitespace-nowrap relative font-medium text-dark/50 tracking-wide border-0;
+          @apply dark:text-white/50;
+          &:after {
+            content: "";
+            height: 3px;
+            @apply absolute bottom-0 left-0 w-full block bg-transparent;
+          }
+          &.active {
+            @apply text-primary dark:text-white;
+            &:after {
+              @apply bg-primary;
+            }
+          }
+        }
+      }
+      &:after {
+        content: "";
+        bottom: 1px;
+        @apply absolute block w-full left-0 h-px bg-slate-200 dark:bg-white/10;
+      }
+
+      &.stretch {
+        @apply gap-x-0;
+        .nav-item {
+          @apply w-full text-center;
+        }
+      }
+    }
+    &.nav-pills {
+      @apply bg-slate-100 border border-slate-300 dark:border-darkmode-300 border-dashed rounded-lg mx-auto p-1;
+      @apply dark:bg-darkmode-300 gap-2;
+      .nav-item {
+        .nav-link {
+          @apply py-2 rounded-md whitespace-nowrap border-none;
+          &.active {
+            @apply bg-primary text-white;
+          }
+        }
+      }
+    }
+  }
+  .nav-link {
+    @apply block appearance-none px-3.5 py-3 border border-transparent text-slate-700 dark:text-slate-400;
+    &.active {
+      @apply text-slate-800 dark:text-white;
+    }
+  }
+  .tab-content {
+    @apply relative;
+    .tab-pane {
+      top: -9999px;
+      left: -9999px;
+      transition: visibility 0s linear 0.6s, opacity 0.6s 0s;
+      @apply absolute invisible opacity-0;
+      &.active {
+        transition: visibility 0s linear 0s, opacity 0.6s 0s;
+        @apply static visible opacity-100;
+      }
+    }
+  }
+
+  .vertical-nav-links {
+    box-shadow: rgba(79, 76, 94, 0.05) 0px 24px 50px 0px;
+    @apply rounded-lg overflow-hidden bg-white dark:bg-darkmode-600;
+
+    .vnl-header,
+    .vnl-footer {
+      @apply bg-slate-50 p-4 text-sm dark:bg-dark/30 border-y border-slate-200 dark:border-white/5;
+
+      &:first-child {
+        @apply border-t-0;
+      }
+
+      &:last-child {
+        @apply border-b-0;
+      }
+    }
+
+    .vnl-links > li {
+      a {
+        @apply flex gap-3 px-4 py-3;
+
+        &:hover {
+          @apply bg-slate-100/50 dark:bg-dark/50;
+        }
+      }
+
+      &:not(:last-child) {
+        > a {
+          @apply border-b;
+        }
+      }
+
+      &.active > a {
+        @apply bg-slate-100/50 dark:bg-dark/50 text-primary;
+      }
+    }
+  }
+}

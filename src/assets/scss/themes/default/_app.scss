@@ -1,0 +1,27 @@
+html.theme-default {
+  --side-nav-width: 0;
+
+  @include media-breakpoint-down(lg) {
+    --side-nav-width: 0;
+  }
+
+  @apply bg-slate-100;
+
+  &.dark {
+    @apply bg-darkmode-700;
+    body {
+      @apply text-slate-400;
+      *,
+      ::before,
+      ::after {
+        @apply border-white/5;
+      }
+    }
+  }
+
+  #content-container {
+    width: 100vw;
+    max-width: calc(100% - var(--side-nav-width));
+    @apply flex-1;
+  }
+}

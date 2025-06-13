@@ -1,0 +1,8 @@
+.ace-container {
+  .ace_editor {
+    &.ace-sqlserver {
+      background-color: #f7f7f7;
+      @apply pt-4;
+    }
+  }
+}

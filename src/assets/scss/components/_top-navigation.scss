@@ -1,0 +1,82 @@
+.top-navigation {
+  //height: 80px;
+  @apply border-b border-slate-100 dark:border-darkmode-800;
+  @apply flex flex-col bg-white dark:bg-darkmode-900;
+
+  .top-navigation__content {
+    height: 92px;
+    @apply flex-shrink-0 flex sm:justify-between gap-4 p-4 container;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      @apply flex-col-reverse items-end;
+    }
+
+    //.top-navigation__buttons {
+    //  @apply flex items-center gap-2;
+    //}
+
+    .top-navigation__middle {
+      @apply relative flex items-center gap-4 w-full;
+
+      #top-navigation__icon {
+        @apply text-4xl text-primary;
+      }
+
+      #top-navigation__title {
+        @apply text-xl font-semibold uppercase text-primary;
+      }
+
+      #top-navigation__description {
+        @apply text-sm text-slate-500 line-clamp-2;
+      }
+    }
+    //.search-box {
+    //  @apply relative flex-1;
+    //  input[type="text"] {
+    //    @apply w-full h-full border-0 focus:ring-0 bg-transparent pl-12 text-sm text-slate-500;
+    //    &::placeholder {
+    //      @apply text-slate-400/60;
+    //    }
+    //  }
+    //
+    //  .search-box__icon {
+    //    @apply absolute left-3 top-1 pointer-events-none text-slate-400;
+    //  }
+    //}
+
+    .top-navigation__profile {
+      @apply flex items-center gap-3 whitespace-nowrap flex-shrink-0;
+      .top-navigation__profile-name {
+        @apply text-slate-600 dark:text-slate-300 text-sm leading-tight font-semibold;
+      }
+
+      .top-navigation__profile-email {
+        @apply text-slate-400 text-xs leading-tight;
+      }
+
+      .top-navigation__profile-image {
+        @apply w-9 h-9 bg-slate-200 rounded-full overflow-hidden shadow-md;
+        img {
+          @apply w-full h-full rounded-full object-cover;
+        }
+      }
+    }
+  }
+
+  .top-navigation__footer {
+    height: 30px;
+    @apply bg-slate-200 flex items-center px-6;
+  }
+}
+
+.breadcrumbs {
+  @apply flex items-center;
+  li {
+    @apply text-xs text-slate-500;
+    &:not(:last-child):after {
+      content: "/";
+      @apply px-1.5;
+    }
+  }
+}

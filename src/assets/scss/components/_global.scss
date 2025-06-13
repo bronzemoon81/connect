@@ -1,0 +1,39 @@
+html {
+  font-size: 15px;
+
+  body {
+    @apply antialiased overflow-x-hidden font-nunito text-base text-slate-700;
+
+    mark {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3 {
+      @apply font-montserrat;
+    }
+  }
+}
+
+.container-xs {
+  width: 100%;
+  margin: 0 auto;
+  @include media-breakpoint-up(md) {
+    max-width: 768px;
+  }
+}
+
+.container-nano {
+  width: 100%;
+  margin: 0 auto;
+  @include media-breakpoint-up(md) {
+    max-width: 400px;
+  }
+}
+
+@layer components {
+  .aspect-image {
+    @apply absolute w-full h-full left-0 top-0 object-cover rounded-md shadow-md;
+  }
+}

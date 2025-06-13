@@ -1,0 +1,56 @@
+@layer components {
+  /* Default Form Select */
+  .form-select {
+    height: 38px;
+    min-height: 38px;
+    @apply bg-slate-50 py-1.5 px-3 pr-8 transition duration-200 ease-in-out w-full text-slate-600 border-slate-200 rounded;
+    @apply focus:ring-4 focus:ring-primary focus:ring-opacity-20 focus:border-primary focus:border-opacity-40;
+    @apply dark:text-slate-400 dark:bg-darkmode-800 dark:border-transparent dark:focus:ring-slate-700 dark:focus:ring-opacity-50;
+    @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    &:disabled,
+    &[readonly] {
+      @apply bg-slate-300/50 font-medium cursor-not-allowed dark:bg-darkmode-800/50 dark:border-transparent opacity-100;
+    }
+
+    &.form-select-sm {
+      height: 32px;
+      min-height: 32px;
+      @apply text-sm py-1 pl-3 pr-6;
+
+      @include media-breakpoint-down(sm) {
+        height: 40px;
+        min-height: 40px;
+        @apply text-base;
+      }
+    }
+    &.form-select-lg {
+      height: 40px;
+      min-height: 40px;
+      @apply text-lg py-1.5 pl-4 pr-8;
+
+      @include media-breakpoint-down(sm) {
+        height: 48px;
+        min-height: 48px;
+      }
+    }
+    &.form-select-xl {
+      height: 52px;
+      min-height: 52px;
+      @apply text-lg py-2 pl-6 pr-10;
+
+      @include media-breakpoint-down(sm) {
+        height: 52px;
+        min-height: 52px;
+      }
+    }
+
+    &.has-error {
+      @apply border-red-100 bg-red-50 dark:bg-darkmode-900 dark:border-transparent;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 40px;
+      min-height: 40px;
+    }
+  }
+}

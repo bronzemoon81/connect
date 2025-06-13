@@ -1,0 +1,19 @@
+@layer components {
+  .form-inline {
+    @apply flex items-start;
+    .form-label-container {
+      @apply mb-0 mr-5 mt-1.5 lg:w-64 xl:w-56 2xl:w-72;
+    }
+  }
+}
+
+.form-inline {
+  @include media-breakpoint-down(lg) {
+    @apply block;
+  }
+  .form-label-container {
+    @include media-breakpoint-down(lg) {
+      @apply mb-2 mr-0 mt-0 text-left;
+    }
+  }
+}

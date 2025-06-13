@@ -1,0 +1,83 @@
+/* Default colors */
+:root {
+  --color-primary: 72 118 249;
+  //--color-primary: 68 63 163;
+  --color-secondary: theme("colors.rgb.slate.200");
+  --color-success: 36 175 157;
+  --color-info: theme("colors.rgb.cyan.500");
+  --color-warning: theme("colors.rgb.amber.600");
+  --color-pending: theme("colors.rgb.amber.600");
+  --color-danger: theme("colors.rgb.red.500");
+  --color-light: theme("colors.rgb.slate.100");
+  --color-dark: theme("colors.rgb.slate.800");
+  --color-slate-50: theme("colors.rgb.slate.50");
+  --color-slate-100: theme("colors.rgb.slate.100");
+  --color-slate-200: theme("colors.rgb.slate.200");
+  --color-slate-300: theme("colors.rgb.slate.300");
+  --color-slate-400: theme("colors.rgb.slate.400");
+  --color-slate-500: theme("colors.rgb.slate.500");
+  --color-slate-600: theme("colors.rgb.slate.600");
+  --color-slate-700: theme("colors.rgb.slate.700");
+  --color-slate-800: theme("colors.rgb.slate.800");
+  --color-slate-900: theme("colors.rgb.slate.900");
+
+  //&.dark {
+  //  --color-primary: 56 57 119;
+  //}
+
+  .dp__theme_light {
+    --dp-primary-color: rgb(68, 63, 163);
+    --dp-primary-disabled-color: rgb(75, 71, 133);
+    --dp-primary-text-color: #f8f5f5;
+  }
+}
+
+.theme-color-red {
+  --color-primary: 217 64 55;
+}
+
+.theme-color-teal {
+  //--color-primary: 36 77 97;
+  --color-primary: 54 116 147;
+}
+
+.theme-color-blue {
+  //--color-primary: 59 113 151;
+  --color-primary: 59 142 201;
+}
+
+/* Default dark-mode colors */
+.dark {
+  --color-primary: 96 132 235;
+  //--color-primary: 86 81 194;
+  --color-slate-500: theme("colors.rgb.slate.400");
+  --color-danger: theme("colors.rgb.red.400");
+  --color-darkmode-50: 87 103 132;
+  --color-darkmode-100: 74 90 121;
+  --color-darkmode-200: 65 81 114;
+  --color-darkmode-300: 53 69 103;
+  --color-darkmode-400: 48 61 93;
+  --color-darkmode-500: 41 53 82;
+  --color-darkmode-600: 40 51 78;
+  --color-darkmode-700: 35 45 69;
+  --color-darkmode-800: 27 37 59;
+  --color-darkmode-900: 15 23 42;
+
+  .dp__theme_light {
+    --dp-primary-color: theme("colors.rgb.cyan.800");
+    --dp-primary-disabled-color: theme("colors.rgb.cyan.900");
+    --dp-primary-text-color: #f8f5f5;
+  }
+
+  &.theme-color-red {
+    --color-primary: 236 80 71;
+  }
+
+  &.theme-color-teal {
+    --color-primary: 54 116 147;
+  }
+
+  &.theme-color-blue {
+    --color-primary: 59 142 201;
+  }
+}

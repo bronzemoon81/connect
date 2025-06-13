@@ -1,0 +1,13 @@
+@layer components {
+  .form-label-container {
+    @apply mb-1.5;
+
+    &.align-right > * {
+      @apply justify-end;
+    }
+  }
+  .form-label {
+    @apply inline-block font-semibold text-slate-600;
+    @apply dark:text-slate-400;
+  }
+}

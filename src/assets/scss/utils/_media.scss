@@ -1,0 +1,26 @@
+/* Breakpoint up */
+@mixin media-breakpoint-up($screen) {
+  @media (min-width: calc(theme("screens.#{$screen}"))) {
+    & {
+      @content;
+    }
+  }
+}
+
+/* Breakpoint down */
+@mixin media-breakpoint-down($screen) {
+  @media (max-width: calc(theme("screens.#{$screen}") - 1px)) {
+    & {
+      @content;
+    }
+  }
+}
+
+/* Breakpoint only */
+@mixin media-breakpoint-only($min, $max) {
+  @media (min-width: calc(theme("screens.#{$min}"))) and (max-width: calc(theme("screens.#{$max}") - 1px)) {
+    & {
+      @content;
+    }
+  }
+}

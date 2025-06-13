@@ -1,0 +1,95 @@
+@layer components {
+  .dropdown {
+    .dropdown-menu {
+      transform: translate3d(-10000px, 0px, 0px) !important;
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    z-index: 9999;
+    inset: 0px auto auto 0px;
+    transition: visibility 0s ease-in-out 0.2s, opacity 0.2s 0s;
+    @apply invisible opacity-0 absolute;
+    &.show {
+      display: block;
+      transition: visibility 0s ease-in-out 0s, opacity 0.2s 0s;
+      @apply visible opacity-100;
+      > .dropdown-content {
+        @apply mt-1;
+        .tab-content .tab-pane {
+          @apply visible;
+        }
+      }
+
+      &:before {
+        content: "";
+        @apply bg-black/10 fixed left-0 top-0 w-full h-full;
+      }
+    }
+    .dropdown-content {
+      transition: margin-top 0.2s;
+      box-shadow: 0px 3px 10px #00000017;
+      @apply rounded-lg relative w-full mt-5 p-2;
+      .dropdown-header {
+        @apply p-2 font-medium;
+      }
+      .dropdown-divider {
+        //@apply my-2;
+      }
+      .dropdown-item {
+        @apply flex items-center px-2 py-2 transition duration-300 ease-in-out leading-tight;
+      }
+      .dropdown-footer {
+        @apply flex p-1;
+      }
+      .tab-content .tab-pane {
+        @apply invisible;
+      }
+
+      li:not(.dropdown-divider-li) + li:not(.dropdown-divider-li) {
+        .dropdown-item {
+          //@apply border-t border-dashed border-slate-200;
+        }
+      }
+
+      [data-popper-arrow] {
+        &:after {
+          content: "";
+          background-image: url("@/assets/images/popper-arrow.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 10px;
+          height: 41px;
+          transform: translate(-16px, 0px);
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .dropdown-content {
+    @apply bg-white dark:bg-darkmode-300;
+  }
+  .dropdown-divider {
+    @apply h-4 border-0;
+    //@apply border-2 border-slate-200/60 dark:border-darkmode-400;
+  }
+  .dropdown-item {
+    @apply w-full rounded-md hover:bg-slate-100 dark:hover:bg-darkmode-200;
+    &:disabled {
+      @apply opacity-50;
+    }
+    * {
+      @apply pointer-events-none;
+    }
+  }
+}
+
+.dark {
+  .dropdown-menu .dropdown-content {
+    *[data-popper-arrow] {
+      &:after {
+        background-image: url("@/assets/images/popper-arrow-dark.svg");
+      }
+    }
+  }
+}

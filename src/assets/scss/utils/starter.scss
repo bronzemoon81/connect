@@ -1,0 +1,28 @@
+/* Tailwind Core */
+@import "./tailwind";
+
+/* Mixins */
+@import "./media";
+
+/* Colors */
+@import "./colors";
+
+/* Components */
+@import "./animate";
+@import "./scrollbar";
+@import "./badge";
+@import "./button";
+@import "./dropdown";
+@import "./tab";
+@import "./alert";
+@import "./input-group";
+@import "./form-label";
+@import "./form-control";
+@import "./form-file";
+@import "./form-select";
+@import "./form-check";
+@import "./form-group";
+@import "./form-inline";
+@import "./table";
+@import "./toastify";
+@import "./modal";

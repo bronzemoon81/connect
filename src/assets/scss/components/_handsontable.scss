@@ -1,0 +1,70 @@
+@import "handsontable/dist/handsontable.full.css";
+
+#app {
+  .handsontable {
+    th,
+    td {
+      height: 30px;
+      line-height: 29px;
+    }
+
+    td {
+      @apply px-2 text-sm;
+    }
+
+    th,
+    td,
+    th:last-child {
+      @apply border-slate-300/70;
+    }
+
+    th {
+      @apply bg-gray-100;
+      .relative {
+        @apply px-2;
+      }
+    }
+
+    thead th {
+      .relative {
+        @apply px-2;
+      }
+    }
+
+    .spotlight {
+      @apply bg-slate-200/60 text-slate-500/75 text-sm whitespace-nowrap overflow-hidden text-ellipsis;
+    }
+
+    .spotlight-soft {
+      @apply bg-slate-100;
+    }
+
+    .has-error {
+      @apply border-red-100 bg-red-50;
+    }
+
+    & .currentRow,
+    & .currentColumn {
+      background-color: #ffffff;
+    }
+
+    .ht_master > .wtHolder {
+      @apply bg-slate-300/70;
+    }
+  }
+}
+
+.htContextMenu table.htCore {
+  @apply border border-slate-200 shadow-xl py-2 bg-white;
+
+  tbody tr td {
+    @apply text-slate-600 leading-none;
+    .htItemWrapper {
+      @apply py-2;
+    }
+  }
+
+  tbody tr td.htDisabled {
+    @apply text-slate-600/50;
+  }
+}

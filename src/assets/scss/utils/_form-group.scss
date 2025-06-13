@@ -1,0 +1,31 @@
+@layer components {
+  .form-group {
+    &.form-group-sm {
+      .form-label {
+        @apply text-sm;
+      }
+      .form-control,
+      .form-select,
+      .dp-custom-input,
+      .vti__input {
+        height: 32px;
+        min-height: 32px;
+        @apply text-sm py-1 px-3;
+
+        @include media-breakpoint-down(sm) {
+          height: 40px;
+          min-height: 40px;
+          @apply text-base;
+        }
+
+        &:where(textarea) {
+          height: 48px;
+          min-height: 48px;
+        }
+      }
+      .dp-custom-input {
+        @apply pl-9;
+      }
+    }
+  }
+}

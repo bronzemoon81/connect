@@ -1,0 +1,12 @@
+node_modules
+release
+.DS_Store
+dist
+dist-electron
+dist-ssr
+*.local
+npm-debug.log
+yarn-error.log
+yarn.lock
+.idea
+.vscode

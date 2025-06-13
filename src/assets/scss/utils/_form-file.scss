@@ -1,0 +1,39 @@
+@layer components {
+  .form-file-list {
+    @apply overflow-x-auto;
+
+    .form-file-item {
+      @apply bg-slate-50 border border-slate-200 flex items-center p-2;
+      @apply dark:text-slate-400 dark:bg-darkmode-800 dark:border-transparent;
+
+      .file-img {
+        @apply flex-shrink-0;
+
+        img {
+          @apply w-12 h-12 object-contain rounded-md;
+        }
+      }
+
+      .file-title {
+        @apply text-sm text-slate-900 flex-1 mx-4 line-clamp-1;
+        @apply dark:text-slate-400;
+      }
+
+      .file-actions {
+        @apply flex-shrink-0 whitespace-nowrap;
+      }
+
+      &:first-child {
+        @apply rounded-t-md;
+      }
+
+      &:not(:first-child) {
+        @apply border-t-0;
+      }
+
+      &:last-child {
+        @apply rounded-b-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@layer components {
+  .input-group {
+    @apply flex;
+    .input-group-text {
+      @apply inline-flex items-center py-1.5 px-3 bg-slate-100 border border-slate-200 text-slate-600 dark:bg-darkmode-900/20 dark:border-darkmode-900/20 dark:text-slate-400;
+    }
+
+    &.input-group-sm {
+      > .input-group-text {
+        @apply text-xs leading-none;
+        svg {
+          @apply w-4 h-4 text-slate-400;
+        }
+      }
+
+      .form-control,
+      .form-select {
+        height: 32px;
+        min-height: 32px;
+        @apply text-sm py-1 px-3;
+
+        @include media-breakpoint-down(sm) {
+          height: 40px;
+          min-height: 40px;
+          @apply text-base;
+        }
+
+        &:where(textarea) {
+          height: 48px;
+          min-height: 48px;
+        }
+      }
+
+      .btn {
+        height: 32px;
+        @apply text-sm py-1 px-3;
+      }
+    }
+
+    &.input-group-lg {
+      > .input-group-text {
+        @apply text-base leading-none;
+      }
+
+      .form-control,
+      .form-select {
+        height: 40px;
+        min-height: 40px;
+        @apply text-lg py-1.5 px-4;
+      }
+    }
+
+    &.input-group-xl {
+      > .input-group-text {
+        @apply text-base leading-none;
+      }
+
+      .form-control,
+      .form-select {
+        height: 52px;
+        min-height: 52px;
+        @apply text-xl py-2 px-5;
+      }
+    }
+
+    > .btn {
+      @apply h-auto;
+    }
+
+    > .btn,
+    > .input-group-text,
+    > .form-control,
+    > .form-select {
+      @apply rounded-none;
+      &:not(:first-child) {
+        border-left-color: transparent;
+      }
+      &:first-child {
+        @apply rounded-l-md;
+      }
+      &:last-child {
+        @apply rounded-r-md;
+      }
+    }
+    > .form-control {
+      @apply z-10;
+    }
+    > .v-select {
+      .vs__dropdown-toggle {
+        @apply rounded-none;
+      }
+      &:not(:first-child) {
+        &:not(:first-child) {
+          .vs__dropdown-toggle {
+            @apply border-l-transparent;
+          }
+        }
+      }
+      &:first-child {
+        .vs__dropdown-toggle {
+          @apply rounded-l-md;
+        }
+      }
+      &:last-child {
+        .vs__dropdown-toggle {
+          @apply rounded-r-md;
+        }
+      }
+    }
+    > .dp__main {
+      .dp__input {
+        @apply rounded-none;
+      }
+      &:not(:first-child) {
+        .dp__input {
+          @apply border-l-transparent;
+        }
+      }
+      &:first-child {
+        .dp__input {
+          @apply rounded-l-md;
+        }
+      }
+      &:last-child {
+        .dp__input {
+          @apply rounded-r-md;
+        }
+      }
+    }
+    > .dropdown {
+      .dropdown-toggle {
+        @apply h-full rounded-none;
+      }
+      &:not(:first-child) {
+        .dropdown-toggle {
+          @apply border-l-transparent;
+        }
+      }
+      &:first-child {
+        .dropdown-toggle {
+          @apply rounded-l-md;
+        }
+      }
+      &:last-child {
+        .dropdown-toggle {
+          @apply rounded-r-md;
+        }
+      }
+    }
+  }
+}

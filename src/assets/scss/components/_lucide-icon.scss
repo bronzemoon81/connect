@@ -1,0 +1,22 @@
+@layer components {
+    .lucide {
+        stroke-width: 1.5px;
+    }
+
+    .icon-bold {
+        stroke-width: 2px !important;
+    }
+
+    .icon-bolder {
+        stroke-width: 3px !important;
+    }
+
+    .icon-square {
+        stroke-width: 2px !important;
+        @apply rounded-md bg-slate-200/80 text-slate-500 dark:bg-white/5 p-1.5 w-8 h-8;
+    }
+
+    .icon-square-danger {
+        @apply icon-square bg-red-100 dark:bg-white/5 text-red-400;
+    }
+}

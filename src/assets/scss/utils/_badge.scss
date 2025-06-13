@@ -1,0 +1,119 @@
+@layer components {
+  .badge-dot {
+    --border-color: theme("colors.rgb.slate.300");
+    @apply inline-flex items-center gap-x-1;
+    &:before {
+      content: "";
+      border-color: var(--border-color);
+      @apply inline-block flex-shrink-0 w-3 h-3 rounded-full border-3;
+    }
+  }
+
+  .badge-dot-lg {
+    &:before {
+      @apply w-4 h-4;
+    }
+  }
+
+  .badge-dot-success:before {
+    @apply border-green-300;
+  }
+
+  .badge-dot-info:before {
+    @apply border-blue-300;
+  }
+
+  .badge-dot-warning:before {
+    @apply border-yellow-400;
+  }
+
+  .badge-dot-danger:before {
+    @apply border-red-300;
+  }
+
+  .badge-label {
+    @apply inline-flex items-center justify-center text-center rounded-full py-1 px-4 text-xs font-semibold leading-snug;
+
+    &.badge-label-sm {
+      @apply px-2.5;
+    }
+  }
+
+  .badge-circle {
+    @apply inline-flex items-center justify-center text-center text-xs font-bold tracking-widest leading-none rounded-full w-8 h-8;
+    @apply ring-2 ring-dark/10;
+  }
+
+  .badge-primary {
+    @apply bg-primary text-white;
+  }
+
+  .badge-secondary {
+    @apply bg-secondary text-slate-600;
+  }
+
+  .badge-success {
+    @apply bg-green-300 text-green-900;
+  }
+
+  .badge-info {
+    @apply bg-blue-300 text-blue-900;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-400 text-yellow-900;
+  }
+
+  .badge-danger {
+    @apply bg-red-300 text-red-900;
+  }
+
+  .badge-primary-soft {
+    @apply bg-primary/75 text-white;
+  }
+
+  .badge-success-soft {
+    @apply bg-green-300/80 text-green-900;
+  }
+
+  .badge-info-soft {
+    @apply bg-blue-300 text-blue-900;
+  }
+
+  .badge-warning-soft {
+    @apply bg-yellow-400/40 text-yellow-900;
+  }
+
+  .badge-danger-soft {
+    @apply bg-red-300 text-red-900;
+  }
+
+  .badge-group {
+    @apply inline-flex;
+
+    .badge-label {
+      @apply rounded-none;
+
+      &:first-child {
+        @apply rounded-l;
+      }
+
+      &:last-child {
+        @apply rounded-r;
+      }
+    }
+
+    &.badge-group-sm {
+      .badge-label {
+        @apply py-1 px-2.5 leading-none font-bold;
+      }
+    }
+
+    &.badge-group-xs {
+      .badge-label {
+        font-size: 0.75rem;
+        @apply pt-1 pb-0.5 px-1.5 leading-tight font-bold;
+      }
+    }
+  }
+}
